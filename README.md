@@ -3,7 +3,7 @@ IE Code is a simple text/code editor developed by Ihsan Entertainment. <br />
 I created it to test some features in Godot.
 Lincensed under: Creative Commons BY SA <br />
 
-Download: https://github.com/Ihsan-Entertainment/IE-Code/releases
+itch.io page: https://ihsan-entertainment.itch.io/ie-code
 
 Versions: <br />
 • v1.0.0 (released on 09/04/2021) <br />
