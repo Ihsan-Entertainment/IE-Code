@@ -1,5 +1,7 @@
 # IE Code
 IE Code is a simple and resource-friendly code editor created with Godot.<br />
+<img src="https://github.com/Ihsan-Entertainment/IE-Code/blob/main/Screenshots/editor.png">
+<img src="https://github.com/Ihsan-Entertainment/IE-Code/blob/main/Screenshots/features.png">
 <br />
 
 # Features
