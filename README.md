@@ -1,6 +1,6 @@
 # IE Code
 IE Code is a simple and resource-friendly code editor created with Godot.<br />
-
+<br />
 
 # Features
 * Highlight Current Line
@@ -14,10 +14,11 @@ IE Code is a simple and resource-friendly code editor created with Godot.<br />
 * Smooth Scrolling
 * Minimap (Code Outline)
 * Real Time Saving
+<br />
 
 # Requirements
 * OpenGL 2.1 / OpenGL ES 2.0 compatible hardware
-
+<br />
 
 # Versions
 * v1.0.0 (released on 09/04/2021)<br />
