@@ -1,0 +1,510 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Assets/Icons/save.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Icons/file.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Icons/open.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Icons/save_as.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Icons/credits.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Icons/settings.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Icons/power.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Scripts/main.gd" type="Script" id=8]
+[ext_resource path="res://Assets/Fonts/DroidSansMono.ttf" type="DynamicFontData" id=9]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.145098, 0.145098, 0.14902, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 13
+font_data = ExtResource( 9 )
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ToolBar" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.046
+margin_bottom = 5.16
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Container" type="HBoxContainer" parent="ToolBar"]
+anchor_left = 0.031
+anchor_top = 0.2
+anchor_right = 0.969
+anchor_bottom = 0.8
+margin_left = -29.76
+margin_top = -6.0
+margin_right = 29.7599
+margin_bottom = 6.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="New" type="Button" parent="ToolBar/Container"]
+margin_left = 202.0
+margin_right = 268.0
+margin_bottom = 30.0
+hint_tooltip = "Creates a new file. (Ctrl+N)"
+mouse_default_cursor_shape = 2
+text = "New"
+icon = ExtResource( 2 )
+
+[node name="Open" type="Button" parent="ToolBar/Container"]
+margin_left = 272.0
+margin_right = 345.0
+margin_bottom = 30.0
+hint_tooltip = "Opens an existing file. (Ctrl+O)"
+mouse_default_cursor_shape = 2
+text = "Open"
+icon = ExtResource( 3 )
+
+[node name="Save" type="Button" parent="ToolBar/Container"]
+margin_left = 349.0
+margin_right = 416.0
+margin_bottom = 30.0
+hint_tooltip = "Saves changes to your current file. (Ctrl+S)"
+mouse_default_cursor_shape = 2
+text = "Save"
+icon = ExtResource( 1 )
+
+[node name="SaveAs" type="Button" parent="ToolBar/Container"]
+margin_left = 420.0
+margin_right = 507.0
+margin_bottom = 30.0
+hint_tooltip = "Save your text as a new file or overwrite one. (Shift+Ctrl+S)"
+mouse_default_cursor_shape = 2
+text = "Save As"
+icon = ExtResource( 4 )
+
+[node name="Settings" type="Button" parent="ToolBar/Container"]
+margin_left = 511.0
+margin_right = 600.0
+margin_bottom = 30.0
+hint_tooltip = "Opens the settings menu. (F3)"
+mouse_default_cursor_shape = 2
+text = "Settings"
+icon = ExtResource( 6 )
+
+[node name="Credits" type="Button" parent="ToolBar/Container"]
+margin_left = 604.0
+margin_right = 687.0
+margin_bottom = 30.0
+hint_tooltip = "Shows the credits."
+mouse_default_cursor_shape = 2
+text = "Credits"
+icon = ExtResource( 5 )
+
+[node name="Quit" type="Button" parent="ToolBar/Container"]
+margin_left = 691.0
+margin_right = 757.0
+margin_bottom = 30.0
+hint_tooltip = "Closes the application. (Alt+F4)"
+mouse_default_cursor_shape = 2
+text = "Quit"
+icon = ExtResource( 7 )
+
+[node name="TextEdit" type="TextEdit" parent="."]
+anchor_top = 0.055
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 0.299999
+custom_fonts/font = SubResource( 2 )
+custom_colors/breakpoint_color = Color( 1, 0.470588, 0.419608, 1 )
+custom_colors/line_number_color = Color( 0.572549, 0.686275, 0.572549, 1 )
+custom_colors/background_color = Color( 0.117647, 0.117647, 0.117647, 1 )
+custom_colors/number_color = Color( 0.443137, 0.8, 0.686275, 1 )
+highlight_current_line = true
+syntax_highlighting = true
+show_line_numbers = true
+draw_tabs = true
+breakpoint_gutter = true
+fold_gutter = true
+highlight_all_occurrences = true
+smooth_scrolling = true
+minimap_draw = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AutoSave" type="Timer" parent="."]
+wait_time = 0.001
+
+[node name="OpenFile" type="FileDialog" parent="."]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 910.0
+margin_bottom = 490.0
+mouse_default_cursor_shape = 2
+window_title = "Open a File"
+resizable = true
+mode = 0
+access = 2
+show_hidden_files = true
+current_dir = "/Users/Flexy_GG1/Documents"
+current_path = "/Users/Flexy_GG1/Documents/"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaveFileAs" type="FileDialog" parent="."]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 910.0
+margin_bottom = 490.0
+mouse_default_cursor_shape = 2
+window_title = "Save File As"
+access = 2
+show_hidden_files = true
+current_dir = "/Users/Flexy_GG1/Documents"
+current_file = "Untitled.txt"
+current_path = "/Users/Flexy_GG1/Documents/Untitled.txt"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SavedDialog" type="AcceptDialog" parent="."]
+margin_left = 380.0
+margin_top = 240.0
+margin_right = 580.0
+margin_bottom = 300.0
+window_title = "Saved"
+dialog_text = "Saved successfully!"
+
+[node name="Credits" type="WindowDialog" parent="."]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 910.0
+margin_bottom = 490.0
+window_title = "Credits"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="Credits"]
+margin_right = 860.0
+margin_bottom = 440.0
+custom_colors/member_variable_color = Color( 1, 1, 1, 1 )
+custom_colors/function_color = Color( 1, 1, 1, 1 )
+custom_colors/background_color = Color( 0.2, 0.2, 0.2, 1 )
+custom_colors/number_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_readonly = Color( 1, 1, 1, 1 )
+text = "IE Code v1.4.2 for Windows/Linux/macOS
+Copyright (c) 2021 Ihsan Entertainment. Lincensed under the MIT License.
+For more information check out https://github.com/Ihsan-Entertainment/IE-Code/blob/main/LICENSE.md
+GitHub (source code and download): https://github.com/Ihsan-Entertainment/IE-Code
+
+----------
+
+Icons by Remixicon (https://remixicon.com)
+
+----------
+
+Code font: Droid Sans Mono
+
+Copyright 2007 Ascender Corp.
+
+Licensed under the Apache License, Version 2.0 (the \"License\");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an \"AS IS\" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+----------
+
+This game uses Godot Engine, available under the following license:
+
+Copyright (c) 2007-2021 Juan Linietsky, Ariel Manzur. Copyright (c) 2014-2021 Godot Engine contributors.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files
+(the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge,
+publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
+CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE."
+readonly = true
+syntax_highlighting = true
+virtual_keyboard_enabled = false
+smooth_scrolling = true
+scroll_vertical = 20.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Settings" type="WindowDialog" parent="."]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 910.0
+margin_bottom = 490.0
+window_title = "Settings"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Window" type="Label" parent="Settings"]
+margin_left = 404.0
+margin_top = 8.0
+margin_right = 455.0
+margin_bottom = 22.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Window"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WindowTitle" type="LineEdit" parent="Settings"]
+margin_left = 100.0
+margin_top = 35.0
+margin_right = 847.0
+margin_bottom = 75.0
+hint_tooltip = "Changes the window title."
+text = "IE Code"
+align = 1
+placeholder_text = "Window title"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Settings/WindowTitle"]
+margin_left = -93.0
+margin_right = -6.0
+margin_bottom = 40.0
+text = "Window Title:"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resizable" type="CheckButton" parent="Settings"]
+margin_top = 75.0
+margin_right = 430.0
+margin_bottom = 115.0
+hint_tooltip = "Allows the window to be resizable by default."
+mouse_default_cursor_shape = 2
+pressed = true
+text = "Resizable"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fullscreen" type="CheckButton" parent="Settings"]
+margin_left = 430.0
+margin_top = 75.0
+margin_right = 860.0
+margin_bottom = 115.0
+hint_tooltip = "Sets the window to full screen.
+
+Note that this is not exclusive fullscreen. On Windows and
+Linux, a borderless window is used to emulate fullscreen. On
+macOS, a new desktop is used to display the running application.
+
+Regardless to the platform, enabling fullscreen will change the
+window size to the monitor's size."
+mouse_default_cursor_shape = 2
+text = "Fullscreen"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="Label" parent="Settings"]
+margin_left = 404.0
+margin_top = 138.0
+margin_right = 455.0
+margin_bottom = 152.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "TextEdit"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HighlightCurrentLine" type="CheckButton" parent="Settings"]
+margin_top = 155.0
+margin_right = 430.0
+margin_bottom = 195.0
+hint_tooltip = "If enabled, the line containing the cursor is
+highlighted."
+mouse_default_cursor_shape = 2
+pressed = true
+text = "Highlight Current Line"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SyntaxHighlighting" type="CheckButton" parent="Settings"]
+margin_left = 430.0
+margin_top = 155.0
+margin_right = 860.0
+margin_bottom = 195.0
+hint_tooltip = "If enabled, any custom colour properties that have been
+set for the TextEdit will be visible."
+mouse_default_cursor_shape = 2
+pressed = true
+text = "Syntax Highlighting (Experimental)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HighligtAllOccurrences" type="CheckButton" parent="Settings"]
+margin_top = 185.0
+margin_right = 430.0
+margin_bottom = 225.0
+hint_tooltip = "If enabled, all occurrences of the selected text will be
+highlighted."
+mouse_default_cursor_shape = 2
+pressed = true
+text = "Highlight All Occurrences"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineNumbers" type="CheckButton" parent="Settings"]
+margin_left = 430.0
+margin_top = 185.0
+margin_right = 860.0
+margin_bottom = 225.0
+hint_tooltip = "If enabled, line numbers are displayed to the left of
+the text."
+mouse_default_cursor_shape = 2
+pressed = true
+text = "Show Line Numbers"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DrawTabs" type="CheckButton" parent="Settings"]
+margin_top = 215.0
+margin_right = 430.0
+margin_bottom = 255.0
+hint_tooltip = "If enabled, the \"tab\" character will have a visible
+representation."
+mouse_default_cursor_shape = 2
+pressed = true
+text = "Draw Tabs"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DrawSpaces" type="CheckButton" parent="Settings"]
+margin_left = 430.0
+margin_top = 215.0
+margin_right = 860.0
+margin_bottom = 255.0
+hint_tooltip = "If enabled, the \"space\" character will have a visible
+representation."
+mouse_default_cursor_shape = 2
+text = "Draw Spaces"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BreakpointGutter" type="CheckButton" parent="Settings"]
+margin_top = 245.0
+margin_right = 430.0
+margin_bottom = 285.0
+hint_tooltip = "If enabled, the breakpoint gutter is visible."
+mouse_default_cursor_shape = 2
+pressed = true
+text = "Breakpoint Gutter"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FoldGutter" type="CheckButton" parent="Settings"]
+margin_left = 430.0
+margin_top = 245.0
+margin_right = 860.0
+margin_bottom = 285.0
+hint_tooltip = "If enabled, the fold gutter is visible. This enables
+folding groupes of intented lines."
+mouse_default_cursor_shape = 2
+pressed = true
+text = "Fold Gutter"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SmoothScrolling" type="CheckButton" parent="Settings"]
+margin_top = 275.0
+margin_right = 430.0
+margin_bottom = 315.0
+hint_tooltip = "If enabled, sets the step of the scrollbar to 0.25
+which results in smoother scrolling."
+mouse_default_cursor_shape = 2
+pressed = true
+text = "Smooth Scrolling"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Minimap" type="CheckButton" parent="Settings"]
+margin_left = 430.0
+margin_top = 275.0
+margin_right = 860.0
+margin_bottom = 315.0
+hint_tooltip = "Ife enabled, a minimap is shown, providing an outline
+of your code."
+mouse_default_cursor_shape = 2
+pressed = true
+text = "Minimap"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AutoSave" type="Label" parent="Settings"]
+margin_left = 398.0
+margin_top = 348.0
+margin_right = 461.0
+margin_bottom = 362.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Autosave"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AutoSaving" type="CheckButton" parent="Settings"]
+margin_top = 375.0
+margin_right = 860.0
+margin_bottom = 415.0
+hint_tooltip = "If enabled, changes to the current file will be saved in real time. 
+Requires that the file already exists and is saved somewhere."
+mouse_default_cursor_shape = 2
+text = "Automatic Saving"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="ToolBar/Container/New" to="." method="new_file"]
+[connection signal="pressed" from="ToolBar/Container/Open" to="." method="open_file_button"]
+[connection signal="pressed" from="ToolBar/Container/Save" to="." method="save_file_button"]
+[connection signal="pressed" from="ToolBar/Container/SaveAs" to="." method="save_file_as_button"]
+[connection signal="pressed" from="ToolBar/Container/Settings" to="." method="settings_button"]
+[connection signal="pressed" from="ToolBar/Container/Credits" to="." method="credits_button"]
+[connection signal="pressed" from="ToolBar/Container/Quit" to="." method="quit_button"]
+[connection signal="timeout" from="AutoSave" to="." method="autosave"]
+[connection signal="file_selected" from="OpenFile" to="." method="open_file"]
+[connection signal="file_selected" from="SaveFileAs" to="." method="save_file_as"]
