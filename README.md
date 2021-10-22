@@ -1,4 +1,3 @@
-<img alt="" src="logo.png" height="80px" />
 # IE Code
 IE Code is a simple and resource-friendly code editor created with Godot.<br />
 <a href="https://github.com/Ihsan-Entertainment/IE-Code/tree/main/Screenshots">View screenshots</a><br />
