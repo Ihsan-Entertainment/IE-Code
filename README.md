@@ -1,9 +1,10 @@
+<img alt="" src="logo.png" height="80px" />
 # IE Code
 IE Code is a simple and resource-friendly code editor created with Godot.<br />
 <a href="https://github.com/Ihsan-Entertainment/IE-Code/tree/main/Screenshots">View screenshots</a><br />
 <br />
 
-# Features
+## Features
 * Fullscreen
 * Change Window Title
 * Highlight Current Line
@@ -19,11 +20,11 @@ IE Code is a simple and resource-friendly code editor created with Godot.<br />
 * Real Time Saving
 <br />
 
-# Requirements
+## Requirements
 * OpenGL 2.1 / OpenGL ES 2.0 compatible hardware
 <br />
 
-# Versions
+## Versions
 * v1.0.0 (released on 09/04/2021)<br />
 * v1.1.0 (released on 09/17/2021)<br />
 * v1.2.0 (released on 09/18/2021)<br />
