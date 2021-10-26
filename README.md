@@ -35,4 +35,5 @@ IE Code is a simple and resource-friendly code editor created with Godot.<br />
 * v1.4.0 (released on 2021-10-11)<br />
 * v1.4.1 (released on 2021-10-20)<br />
 * v1.4.2 (released on 2021-10-21)<br />
-* v1.4.3 (released on 2021-10-22)
+* v1.4.3 (released on 2021-10-22)<br />
+* v1.4.4 (released on 2021-10-26)
