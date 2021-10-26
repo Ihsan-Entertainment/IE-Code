@@ -118,7 +118,7 @@ anchor_bottom = 1.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/safe_line_number_color = Color( 0.764706, 0.917647, 0.764706, 0.74902 )
 custom_colors/breakpoint_color = Color( 1, 0.470588, 0.419608, 1 )
-custom_colors/line_number_color = Color( 0.764706, 0.764706, 0.764706, 0.501961 )
+custom_colors/line_number_color = Color( 0.572549, 0.686275, 0.572549, 1 )
 custom_colors/background_color = Color( 0.117647, 0.117647, 0.117647, 1 )
 custom_colors/number_color = Color( 0.443137, 0.8, 0.686275, 1 )
 highlight_current_line = true
@@ -163,9 +163,9 @@ mouse_default_cursor_shape = 2
 window_title = "Save File As"
 access = 2
 show_hidden_files = true
-current_dir = "/Users/Flexy_GG1/Documents"
-current_file = "Untitled.txt"
-current_path = "/Users/Flexy_GG1/Documents/Untitled.txt"
+current_dir = "/Users/Flexy_GG1"
+current_file = "Documents"
+current_path = "/Users/Flexy_GG1/Documents"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -182,7 +182,6 @@ __meta__ = {
 }
 
 [node name="Credits" type="WindowDialog" parent="."]
-visible = true
 margin_left = 50.0
 margin_top = 50.0
 margin_right = 974.0
@@ -193,6 +192,7 @@ __meta__ = {
 }
 
 [node name="TextEdit" type="TextEdit" parent="Credits"]
+visible = false
 margin_right = 924.0
 margin_bottom = 500.0
 custom_colors/member_variable_color = Color( 1, 1, 1, 1 )
@@ -200,16 +200,16 @@ custom_colors/function_color = Color( 1, 1, 1, 1 )
 custom_colors/background_color = Color( 0.145098, 0.145098, 0.14902, 1 )
 custom_colors/number_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_readonly = Color( 1, 1, 1, 1 )
-text = "IE Code v1.4.3 for macOS
+text = "IE Code v1.4.4 for [OS]
 Copyright (c) 2021 Ihsan Entertainment. Lincensed under the MIT License.
 For more information check out https://github.com/Ihsan-Entertainment/IE-Code/blob/main/LICENSE.md
 GitHub (source code and download): https://github.com/Ihsan-Entertainment/IE-Code
 
---------------------------------------------------
+</></></></></></></></></></>
 
 Icons by Remixicon (https://remixicon.com)
 
---------------------------------------------------
+</></></></></></></></></></>
 
 Code font: Droid Sans Mono
 
@@ -227,7 +227,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
---------------------------------------------------
+</></></></></></></></></></>
 
 This game uses Godot Engine, available under the following license:
 
@@ -249,6 +249,7 @@ readonly = true
 syntax_highlighting = true
 virtual_keyboard_enabled = false
 smooth_scrolling = true
+scroll_vertical = 17.25
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -266,9 +267,9 @@ __meta__ = {
 
 [node name="Window" type="Label" parent="Settings"]
 margin_left = 404.0
-margin_top = 8.0
+margin_top = 20.0
 margin_right = 455.0
-margin_bottom = 22.0
+margin_bottom = 34.0
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Window"
 align = 1
@@ -277,25 +278,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="WindowTitle" type="LineEdit" parent="Settings"]
-margin_left = 100.0
-margin_top = 35.0
-margin_right = 847.0
-margin_bottom = 75.0
-hint_tooltip = "Changes the window title."
-text = "IE Code"
-align = 1
-placeholder_text = "Window title"
+[node name="Borderless" type="CheckButton" parent="Settings"]
+margin_top = 45.0
+margin_right = 430.0
+margin_bottom = 85.0
+hint_tooltip = "Forces the main window to be borderless."
+mouse_default_cursor_shape = 2
+text = "Borderless"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Settings/WindowTitle"]
-margin_left = -93.0
-margin_right = -6.0
-margin_bottom = 40.0
-text = "Window Title:"
-valign = 1
+[node name="EnergySaving" type="CheckButton" parent="Settings"]
+margin_left = 430.0
+margin_top = 45.0
+margin_right = 860.0
+margin_bottom = 85.0
+hint_tooltip = "If enabled, keeps the screen on (even in case of
+inactivity), so the screen saver does not take over."
+pressed = true
+text = "Keep Screen On"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -333,9 +335,9 @@ __meta__ = {
 
 [node name="TextEdit" type="Label" parent="Settings"]
 margin_left = 404.0
-margin_top = 138.0
+margin_top = 135.0
 margin_right = 455.0
-margin_bottom = 152.0
+margin_bottom = 149.0
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "TextEdit"
 align = 1
