@@ -15,6 +15,8 @@ func _process(delta):
 		save_file_as_button()
 	if Input.is_action_pressed("Settings"):
 		settings_button()
+	if Input.is_action_pressed("Cancel") and $Settings/Fullscreen.pressed == true:
+		$Settings/Fullscreen.pressed = false
 
 	window_settings()
 	textedit_settings()
@@ -22,7 +24,13 @@ func _process(delta):
 
 
 func window_settings():
-	OS.set_window_title($Settings/WindowTitle.text)
+	if current_path == "no path set":
+		OS.set_window_title("IE Code - Unsaved File")
+	else:
+		OS.set_window_title("IE Code" + " - " + current_path)
+
+	OS.window_borderless = $Settings/Borderless.pressed
+	OS.keep_screen_on = $Settings/EnergySaving.pressed
 	OS.window_resizable = $Settings/Resizable.pressed
 	OS.window_fullscreen = $Settings/Fullscreen.pressed
 
