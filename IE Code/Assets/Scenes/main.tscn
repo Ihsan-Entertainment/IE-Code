@@ -192,7 +192,6 @@ __meta__ = {
 }
 
 [node name="TextEdit" type="TextEdit" parent="Credits"]
-visible = false
 margin_right = 924.0
 margin_bottom = 500.0
 custom_colors/member_variable_color = Color( 1, 1, 1, 1 )
