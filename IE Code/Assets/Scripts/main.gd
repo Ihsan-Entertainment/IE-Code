@@ -15,8 +15,8 @@ func _process(delta):
 		save_file_as_button()
 	if Input.is_action_pressed("Settings"):
 		settings_button()
-	if Input.is_action_pressed("Cancel") and $Settings/Fullscreen.pressed == true:
-		$Settings/Fullscreen.pressed = false
+	if Input.is_action_pressed("Cancel") and $Settings/TabContainer/Window/Fullscreen.pressed == true:
+		$Settings/TabContainer/Window/Fullscreen.pressed = false
 
 	window_settings()
 	textedit_settings()
@@ -29,38 +29,36 @@ func window_settings():
 	else:
 		OS.set_window_title("IE Code" + " - " + current_path)
 
-	OS.window_borderless = $Settings/Borderless.pressed
-	OS.keep_screen_on = $Settings/EnergySaving.pressed
-	OS.window_resizable = $Settings/Resizable.pressed
-	OS.window_fullscreen = $Settings/Fullscreen.pressed
+	OS.window_borderless = $Settings/TabContainer/Window/Borderless.pressed
+	OS.keep_screen_on = $Settings/TabContainer/Window/EnergySaving.pressed
+	OS.window_resizable = $Settings/TabContainer/Window/Resizable.pressed
+	OS.window_fullscreen = $Settings/TabContainer/Window/Fullscreen.pressed
 
 
 func textedit_settings():
-	$TextEdit.highlight_current_line = $Settings/HighlightCurrentLine.pressed
-	$TextEdit.syntax_highlighting = $Settings/SyntaxHighlighting.pressed
-	$TextEdit.highlight_current_line = $Settings/HighlightCurrentLine.pressed
-	$TextEdit.show_line_numbers = $Settings/LineNumbers.pressed
-	$TextEdit.draw_tabs = $Settings/DrawTabs.pressed
-	$TextEdit.draw_spaces = $Settings/DrawSpaces.pressed
-	$TextEdit.breakpoint_gutter = $Settings/BreakpointGutter.pressed
-	$TextEdit.fold_gutter = $Settings/FoldGutter.pressed
-	$TextEdit.highlight_all_occurrences = $Settings/HighligtAllOccurrences.pressed
-	$TextEdit.smooth_scrolling = $Settings/SmoothScrolling.pressed
-	$TextEdit.minimap_draw = $Settings/Minimap.pressed
+	$TextEdit.highlight_current_line = $Settings/TabContainer/TextEdit/HighlightCurrentLine.pressed
+	$TextEdit.highlight_all_occurrences = $Settings/TabContainer/TextEdit/HighligtAllOccurrences.pressed
+	$TextEdit.syntax_highlighting = $Settings/TabContainer/TextEdit/SyntaxHighlighting.pressed
+	$TextEdit.show_line_numbers = $Settings/TabContainer/TextEdit/LineNumbers.pressed
+	$TextEdit.draw_tabs = $Settings/TabContainer/TextEdit/DrawTabs.pressed
+	$TextEdit.draw_spaces = $Settings/TabContainer/TextEdit/DrawSpaces.pressed
+	$TextEdit.breakpoint_gutter = $Settings/TabContainer/TextEdit/BreakpointGutter.pressed
+	$TextEdit.fold_gutter = $Settings/TabContainer/TextEdit/FoldGutter.pressed
+	$TextEdit.smooth_scrolling = $Settings/TabContainer/TextEdit/SmoothScrolling.pressed
+	$TextEdit.minimap_draw = $Settings/TabContainer/TextEdit/Minimap.pressed
 
 
 func autosave_settings():
-	if $Settings/AutoSaving.pressed == true: 
+	if $Settings/TabContainer/Autosave/AutoSaving.pressed == true: 
 		$AutoSave.start(0.001)
 	else:
 		$AutoSave.stop()
 
 
 func autosave():
-# only if current_path != "no path set"
-	var file = File.new()
-	file.open(current_path, 2)
-	file.store_string($TextEdit.text)
+		var file = File.new()
+		file.open(current_path, 2)
+		file.store_string($TextEdit.text)
 
 
 func settings_button():
