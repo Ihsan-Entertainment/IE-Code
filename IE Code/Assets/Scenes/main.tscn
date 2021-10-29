@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Assets/Icons/save.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Icons/file.png" type="Texture" id=2]
@@ -16,6 +16,9 @@ bg_color = Color( 0.145098, 0.145098, 0.14902, 1 )
 [sub_resource type="DynamicFont" id=2]
 size = 13
 font_data = ExtResource( 9 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.145098, 0.145098, 0.14902, 1 )
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
@@ -53,7 +56,6 @@ margin_left = 232.0
 margin_right = 298.0
 margin_bottom = 31.0
 hint_tooltip = "Creates a new file. (Ctrl+N)"
-mouse_default_cursor_shape = 2
 text = "New"
 icon = ExtResource( 2 )
 
@@ -62,7 +64,6 @@ margin_left = 302.0
 margin_right = 375.0
 margin_bottom = 31.0
 hint_tooltip = "Opens an existing file. (Ctrl+O)"
-mouse_default_cursor_shape = 2
 text = "Open"
 icon = ExtResource( 3 )
 
@@ -71,7 +72,6 @@ margin_left = 379.0
 margin_right = 446.0
 margin_bottom = 31.0
 hint_tooltip = "Saves changes to your current file. (Ctrl+S)"
-mouse_default_cursor_shape = 2
 text = "Save"
 icon = ExtResource( 1 )
 
@@ -80,7 +80,6 @@ margin_left = 450.0
 margin_right = 537.0
 margin_bottom = 31.0
 hint_tooltip = "Save your text as a new file or overwrite one. (Shift+Ctrl+S)"
-mouse_default_cursor_shape = 2
 text = "Save As"
 icon = ExtResource( 4 )
 
@@ -89,7 +88,6 @@ margin_left = 541.0
 margin_right = 630.0
 margin_bottom = 31.0
 hint_tooltip = "Opens the settings menu. (F3)"
-mouse_default_cursor_shape = 2
 text = "Settings"
 icon = ExtResource( 6 )
 
@@ -98,7 +96,6 @@ margin_left = 634.0
 margin_right = 717.0
 margin_bottom = 31.0
 hint_tooltip = "Shows the credits."
-mouse_default_cursor_shape = 2
 text = "Credits"
 icon = ExtResource( 5 )
 
@@ -107,7 +104,6 @@ margin_left = 721.0
 margin_right = 787.0
 margin_bottom = 31.0
 hint_tooltip = "Closes the application. (Alt+F4)"
-mouse_default_cursor_shape = 2
 text = "Quit"
 icon = ExtResource( 7 )
 
@@ -148,8 +144,8 @@ resizable = true
 mode = 0
 access = 2
 show_hidden_files = true
-current_dir = "/Users/Flexy_GG1/Documents"
-current_path = "/Users/Flexy_GG1/Documents/"
+current_dir = "/Users"
+current_path = "/Users/"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -163,9 +159,9 @@ mouse_default_cursor_shape = 2
 window_title = "Save File As"
 access = 2
 show_hidden_files = true
-current_dir = "/Users/Flexy_GG1"
-current_file = "Documents"
-current_path = "/Users/Flexy_GG1/Documents"
+current_dir = "/Users"
+current_file = "Users"
+current_path = "/Users/Users"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -199,16 +195,16 @@ custom_colors/function_color = Color( 1, 1, 1, 1 )
 custom_colors/background_color = Color( 0.145098, 0.145098, 0.14902, 1 )
 custom_colors/number_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_readonly = Color( 1, 1, 1, 1 )
-text = "IE Code v1.4.4 for [OS]
+text = "IE Code v1.5.0 for [OS]
 Copyright (c) 2021 Ihsan Entertainment. Lincensed under the MIT License.
 For more information check out https://github.com/Ihsan-Entertainment/IE-Code/blob/main/LICENSE.md
 GitHub (source code and download): https://github.com/Ihsan-Entertainment/IE-Code
 
-</></></></></></></></></></>
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
 Icons by Remixicon (https://remixicon.com)
 
-</></></></></></></></></></>
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
 Code font: Droid Sans Mono
 
@@ -226,7 +222,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-</></></></></></></></></></>
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
 This game uses Godot Engine, available under the following license:
 
@@ -254,45 +250,57 @@ __meta__ = {
 }
 
 [node name="Settings" type="WindowDialog" parent="."]
-margin_left = 60.0
-margin_top = 80.0
-margin_right = 920.0
-margin_bottom = 520.0
+margin_left = 25.0
+margin_top = 50.0
+margin_right = 949.0
+margin_bottom = 550.0
 rect_scale = Vector2( 1.05, 1.05 )
 window_title = "Settings"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Window" type="Label" parent="Settings"]
-margin_left = 404.0
-margin_top = 20.0
-margin_right = 455.0
-margin_bottom = 34.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "Window"
-align = 1
-valign = 1
+[node name="Background" type="Panel" parent="Settings"]
+margin_right = 924.0
+margin_bottom = 500.0
+custom_styles/panel = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Borderless" type="CheckButton" parent="Settings"]
-margin_top = 45.0
-margin_right = 430.0
-margin_bottom = 85.0
+[node name="TabContainer" type="TabContainer" parent="Settings"]
+margin_right = 924.0
+margin_bottom = 60.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Window" type="Tabs" parent="Settings/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Borderless" type="CheckButton" parent="Settings/TabContainer/Window"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 40.0
+margin_right = -458.0
+margin_bottom = 56.0
 hint_tooltip = "Forces the main window to be borderless."
-mouse_default_cursor_shape = 2
+disabled = true
 text = "Borderless"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="EnergySaving" type="CheckButton" parent="Settings"]
-margin_left = 430.0
-margin_top = 45.0
-margin_right = 860.0
-margin_bottom = 85.0
+[node name="EnergySaving" type="CheckButton" parent="Settings/TabContainer/Window"]
+margin_left = 458.0
+margin_top = 40.0
+margin_right = 916.0
+margin_bottom = 80.0
 hint_tooltip = "If enabled, keeps the screen on (even in case of
 inactivity), so the screen saver does not take over."
 pressed = true
@@ -301,23 +309,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Resizable" type="CheckButton" parent="Settings"]
-margin_top = 75.0
-margin_right = 430.0
-margin_bottom = 115.0
+[node name="Resizable" type="CheckButton" parent="Settings/TabContainer/Window"]
+margin_top = 80.0
+margin_right = 458.0
+margin_bottom = 120.0
 hint_tooltip = "Allows the window to be resizable by default."
-mouse_default_cursor_shape = 2
 pressed = true
 text = "Resizable"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Fullscreen" type="CheckButton" parent="Settings"]
-margin_left = 430.0
-margin_top = 75.0
-margin_right = 860.0
-margin_bottom = 115.0
+[node name="Fullscreen" type="CheckButton" parent="Settings/TabContainer/Window"]
+margin_left = 458.0
+margin_top = 80.0
+margin_right = 916.0
+margin_bottom = 120.0
 hint_tooltip = "Sets the window to full screen.
 
 Note that this is not exclusive fullscreen. On Windows and
@@ -326,178 +333,158 @@ macOS, a new desktop is used to display the running application.
 
 Regardless to the platform, enabling fullscreen will change the
 window size to the monitor's size."
-mouse_default_cursor_shape = 2
 text = "Fullscreen"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextEdit" type="Label" parent="Settings"]
-margin_left = 404.0
-margin_top = 135.0
-margin_right = 455.0
-margin_bottom = 149.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "TextEdit"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="TextEdit" type="Tabs" parent="Settings/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
 
-[node name="HighlightCurrentLine" type="CheckButton" parent="Settings"]
-margin_top = 155.0
-margin_right = 430.0
-margin_bottom = 195.0
+[node name="HighlightCurrentLine" type="CheckButton" parent="Settings/TabContainer/TextEdit"]
+margin_top = 40.0
+margin_right = 458.0
+margin_bottom = 80.0
 hint_tooltip = "If enabled, the line containing the cursor is
 highlighted."
-mouse_default_cursor_shape = 2
 pressed = true
 text = "Highlight Current Line"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SyntaxHighlighting" type="CheckButton" parent="Settings"]
-margin_left = 430.0
-margin_top = 155.0
-margin_right = 860.0
-margin_bottom = 195.0
-hint_tooltip = "If enabled, any custom colour properties that have been
-set for the TextEdit will be visible."
-mouse_default_cursor_shape = 2
-pressed = true
-text = "Syntax Highlighting (Experimental)"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="HighligtAllOccurrences" type="CheckButton" parent="Settings"]
-margin_top = 185.0
-margin_right = 430.0
-margin_bottom = 225.0
+[node name="HighligtAllOccurrences" type="CheckButton" parent="Settings/TabContainer/TextEdit"]
+margin_top = 80.0
+margin_right = 458.0
+margin_bottom = 120.0
 hint_tooltip = "If enabled, all occurrences of the selected text will be
 highlighted."
-mouse_default_cursor_shape = 2
 pressed = true
 text = "Highlight All Occurrences"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LineNumbers" type="CheckButton" parent="Settings"]
-margin_left = 430.0
-margin_top = 185.0
-margin_right = 860.0
-margin_bottom = 225.0
+[node name="SyntaxHighlighting" type="CheckButton" parent="Settings/TabContainer/TextEdit"]
+margin_left = 458.0
+margin_top = 40.0
+margin_right = 916.0
+margin_bottom = 80.0
+hint_tooltip = "If enabled, any custom colour properties that have been
+set for the TextEdit will be visible."
+pressed = true
+text = "Syntax Highlighting (Experimental)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineNumbers" type="CheckButton" parent="Settings/TabContainer/TextEdit"]
+margin_left = 458.0
+margin_top = 80.0
+margin_right = 916.0
+margin_bottom = 120.0
 hint_tooltip = "If enabled, line numbers are displayed to the left of
 the text."
-mouse_default_cursor_shape = 2
 pressed = true
 text = "Show Line Numbers"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="DrawTabs" type="CheckButton" parent="Settings"]
-margin_top = 215.0
-margin_right = 430.0
-margin_bottom = 255.0
+[node name="DrawTabs" type="CheckButton" parent="Settings/TabContainer/TextEdit"]
+margin_top = 120.0
+margin_right = 458.0
+margin_bottom = 160.0
 hint_tooltip = "If enabled, the \"tab\" character will have a visible
 representation."
-mouse_default_cursor_shape = 2
 pressed = true
 text = "Draw Tabs"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="DrawSpaces" type="CheckButton" parent="Settings"]
-margin_left = 430.0
-margin_top = 215.0
-margin_right = 860.0
-margin_bottom = 255.0
+[node name="DrawSpaces" type="CheckButton" parent="Settings/TabContainer/TextEdit"]
+margin_left = 458.0
+margin_top = 120.0
+margin_right = 916.0
+margin_bottom = 160.0
 hint_tooltip = "If enabled, the \"space\" character will have a visible
 representation."
-mouse_default_cursor_shape = 2
 text = "Draw Spaces"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BreakpointGutter" type="CheckButton" parent="Settings"]
-margin_top = 245.0
-margin_right = 430.0
-margin_bottom = 285.0
+[node name="BreakpointGutter" type="CheckButton" parent="Settings/TabContainer/TextEdit"]
+margin_top = 160.0
+margin_right = 458.0
+margin_bottom = 200.0
 hint_tooltip = "If enabled, the breakpoint gutter is visible."
-mouse_default_cursor_shape = 2
 pressed = true
 text = "Breakpoint Gutter"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FoldGutter" type="CheckButton" parent="Settings"]
-margin_left = 430.0
-margin_top = 245.0
-margin_right = 860.0
-margin_bottom = 285.0
+[node name="FoldGutter" type="CheckButton" parent="Settings/TabContainer/TextEdit"]
+margin_left = 458.0
+margin_top = 160.0
+margin_right = 916.0
+margin_bottom = 200.0
 hint_tooltip = "If enabled, the fold gutter is visible. This enables
 folding groupes of intented lines."
-mouse_default_cursor_shape = 2
 pressed = true
 text = "Fold Gutter"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SmoothScrolling" type="CheckButton" parent="Settings"]
-margin_top = 275.0
-margin_right = 430.0
-margin_bottom = 315.0
+[node name="SmoothScrolling" type="CheckButton" parent="Settings/TabContainer/TextEdit"]
+margin_top = 200.0
+margin_right = 458.0
+margin_bottom = 240.0
 hint_tooltip = "If enabled, sets the step of the scrollbar to 0.25
 which results in smoother scrolling."
-mouse_default_cursor_shape = 2
 pressed = true
 text = "Smooth Scrolling"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Minimap" type="CheckButton" parent="Settings"]
-margin_left = 430.0
-margin_top = 275.0
-margin_right = 860.0
-margin_bottom = 315.0
+[node name="Minimap" type="CheckButton" parent="Settings/TabContainer/TextEdit"]
+margin_left = 458.0
+margin_top = 200.0
+margin_right = 916.0
+margin_bottom = 240.0
 hint_tooltip = "Ife enabled, a minimap is shown, providing an outline
 of your code."
-mouse_default_cursor_shape = 2
 pressed = true
 text = "Minimap"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AutoSave" type="Label" parent="Settings"]
-margin_left = 398.0
-margin_top = 348.0
-margin_right = 461.0
-margin_bottom = 362.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "Autosave"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Autosave" type="Tabs" parent="Settings/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
 
-[node name="AutoSaving" type="CheckButton" parent="Settings"]
-margin_top = 375.0
-margin_right = 860.0
-margin_bottom = 415.0
+[node name="AutoSaving" type="CheckButton" parent="Settings/TabContainer/Autosave"]
+margin_top = 40.0
+margin_right = 458.0
+margin_bottom = 80.0
 hint_tooltip = "If enabled, changes to the current file will be saved in real time. 
 Requires that the file already exists and is saved somewhere."
-mouse_default_cursor_shape = 2
 text = "Automatic Saving"
 __meta__ = {
 "_edit_use_anchors_": false
