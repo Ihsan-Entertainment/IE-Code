@@ -4,18 +4,25 @@ extends Control
 var current_path = "no path set"
 
 
+func _ready():
+	OS.window_maximized = true
+	print("Time and date:")
+	print(OS.get_datetime())
+
+
+# warning-ignore:unused_argument
 func _process(delta):
-	if Input.is_action_pressed("New File"):
+	if Input.is_action_pressed("new_file"):
 		new_file()
-	if Input.is_action_pressed("Open File"):
+	if Input.is_action_pressed("open_file"):
 		open_file_button()
-	if Input.is_action_pressed("Save File"):
+	if Input.is_action_pressed("save_file"):
 		save_file_button()
-	if Input.is_action_pressed("Save File As"):
+	if Input.is_action_pressed("save_file_as"):
 		save_file_as_button()
-	if Input.is_action_pressed("Settings"):
+	if Input.is_action_pressed("settings"):
 		settings_button()
-	if Input.is_action_pressed("Cancel") and $Settings/TabContainer/Window/Fullscreen.pressed == true:
+	if Input.is_action_pressed("cancel") and $Settings/TabContainer/Window/Fullscreen.pressed == true:
 		$Settings/TabContainer/Window/Fullscreen.pressed = false
 
 	window_settings()
@@ -49,7 +56,7 @@ func textedit_settings():
 
 
 func autosave_settings():
-	if $Settings/TabContainer/Autosave/AutoSaving.pressed == true: 
+	if $Settings/TabContainer/AutoSave/AutoSaving.pressed == true: 
 		$AutoSave.start(0.001)
 	else:
 		$AutoSave.stop()
@@ -68,14 +75,17 @@ func settings_button():
 func new_file():
 	$TextEdit.text = ""
 	current_path = "no path set"
+	print("New file created.")
 
 
 func open_file(path):
-	print(path)
 	var file = File.new()
 	file.open(path, 1)
 	current_path = path
 	$TextEdit.text = file.get_as_text()
+
+	print("File opened:")
+	print(path)
 
 
 func open_file_button():
@@ -91,6 +101,9 @@ func save_file_button():
 		file.store_string($TextEdit.text)
 		$SavedDialog.popup()
 
+	print("File saved:")
+	print(current_path)
+
 
 func save_file_as(path):
 	var file = File.new()
@@ -98,6 +111,9 @@ func save_file_as(path):
 	file.store_string($TextEdit.text)
 	current_path = path
 	$SavedDialog.popup()
+
+	print("File saved as:")
+	print(path)
 
 
 func save_file_as_button():
@@ -109,4 +125,5 @@ func credits_button():
 
 
 func quit_button():
+	print("Application closed.")
 	get_tree().quit()
