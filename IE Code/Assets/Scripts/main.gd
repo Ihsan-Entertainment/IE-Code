@@ -6,6 +6,7 @@ var current_path = "no path set"
 
 func _ready():
 	OS.window_maximized = true
+	print("Application started.")
 	print("Time and date:")
 	print(OS.get_datetime())
 
@@ -13,7 +14,8 @@ func _ready():
 # warning-ignore:unused_argument
 func _process(delta):
 	if Input.is_action_pressed("new_file"):
-		new_file()
+		new_file_button()
+		new_file_button()
 	if Input.is_action_pressed("open_file"):
 		open_file_button()
 	if Input.is_action_pressed("save_file"):
@@ -24,6 +26,7 @@ func _process(delta):
 		settings_button()
 	if Input.is_action_pressed("cancel") and $Settings/TabContainer/Window/Fullscreen.pressed == true:
 		$Settings/TabContainer/Window/Fullscreen.pressed = false
+
 
 	window_settings()
 	textedit_settings()
@@ -69,13 +72,17 @@ func autosave():
 
 
 func settings_button():
-	$Settings.popup()
+	$Settings.popup_centered()
 
 
 func new_file():
 	$TextEdit.text = ""
 	current_path = "no path set"
 	print("New file created.")
+
+
+func new_file_button():
+	$ConfirmNewFile.popup_centered()
 
 
 func open_file(path):
@@ -89,7 +96,7 @@ func open_file(path):
 
 
 func open_file_button():
-	$OpenFile.popup()
+	$OpenFile.popup_centered()
 
 
 func save_file_button():
@@ -99,7 +106,7 @@ func save_file_button():
 		var file = File.new()
 		file.open(current_path, 2)
 		file.store_string($TextEdit.text)
-		$SavedDialog.popup()
+		$SavedDialog.popup_centered()
 
 	print("File saved:")
 	print(current_path)
@@ -110,20 +117,23 @@ func save_file_as(path):
 	file.open(path, 2)
 	file.store_string($TextEdit.text)
 	current_path = path
-	$SavedDialog.popup()
+	$SavedDialog.popup_centered()
 
 	print("File saved as:")
 	print(path)
 
 
 func save_file_as_button():
-	$SaveFileAs.popup()
+	$SaveFileAs.popup_centered()
 
 
-func credits_button():
-	$Credits.popup()
+func about_button():
+	$About.popup_centered()
 
 
 func quit_button():
-	print("Application closed.")
+	$ConfirmQuit.popup_centered()
+
+
+func confirm_quit():
 	get_tree().quit()
