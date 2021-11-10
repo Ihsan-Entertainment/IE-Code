@@ -52,58 +52,62 @@ __meta__ = {
 }
 
 [node name="New" type="Button" parent="ToolBar/Container"]
-margin_left = 360.0
-margin_right = 426.0
+margin_left = 363.0
+margin_right = 429.0
 margin_bottom = 37.0
 hint_tooltip = "Creates a new file. (Ctrl+N)"
 text = "New"
 icon = ExtResource( 2 )
 
 [node name="Open" type="Button" parent="ToolBar/Container"]
-margin_left = 430.0
-margin_right = 503.0
+margin_left = 433.0
+margin_right = 506.0
 margin_bottom = 37.0
 hint_tooltip = "Opens an existing file. (Ctrl+O)"
 text = "Open"
 icon = ExtResource( 3 )
 
 [node name="Save" type="Button" parent="ToolBar/Container"]
-margin_left = 507.0
-margin_right = 574.0
+margin_left = 510.0
+margin_right = 577.0
 margin_bottom = 37.0
 hint_tooltip = "Saves changes to your current file. (Ctrl+S)"
 text = "Save"
 icon = ExtResource( 1 )
 
 [node name="SaveAs" type="Button" parent="ToolBar/Container"]
-margin_left = 578.0
-margin_right = 665.0
+margin_left = 581.0
+margin_right = 668.0
 margin_bottom = 37.0
 hint_tooltip = "Save your text as a new file or overwrite one. (Shift+Ctrl+S)"
 text = "Save As"
 icon = ExtResource( 4 )
 
 [node name="Settings" type="Button" parent="ToolBar/Container"]
-margin_left = 669.0
-margin_right = 758.0
+margin_left = 672.0
+margin_right = 761.0
 margin_bottom = 37.0
 hint_tooltip = "Opens the settings menu. (F3)"
 text = "Settings"
 icon = ExtResource( 6 )
 
-[node name="Credits" type="Button" parent="ToolBar/Container"]
-margin_left = 762.0
-margin_right = 845.0
+[node name="About" type="Button" parent="ToolBar/Container"]
+margin_left = 765.0
+margin_right = 841.0
 margin_bottom = 37.0
-hint_tooltip = "Shows the credits."
-text = "Credits"
+hint_tooltip = "About IE Code."
+text = "About"
 icon = ExtResource( 5 )
 
 [node name="Quit" type="Button" parent="ToolBar/Container"]
-margin_left = 849.0
-margin_right = 915.0
+margin_left = 845.0
+margin_right = 911.0
 margin_bottom = 37.0
 hint_tooltip = "Closes the application. (Alt+F4)"
+custom_colors/font_color_disabled = Color( 0.909804, 0.0666667, 0.137255, 1 )
+custom_colors/font_color = Color( 0.909804, 0.0666667, 0.137255, 1 )
+custom_colors/font_color_hover = Color( 0.909804, 0.0666667, 0.137255, 1 )
+custom_colors/font_color_pressed = Color( 0.909804, 0.0666667, 0.137255, 1 )
 text = "Quit"
 icon = ExtResource( 7 )
 
@@ -161,34 +165,54 @@ window_title = "Save File As"
 access = 2
 show_hidden_files = true
 current_dir = "/Users"
-current_file = "Users"
-current_path = "/Users/Users"
+current_file = "Untitled.txt"
+current_path = "/Users/Untitled.txt"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="SavedDialog" type="AcceptDialog" parent="."]
-margin_left = 404.0
-margin_top = 280.0
-margin_right = 604.0
-margin_bottom = 340.0
+margin_left = 500.0
+margin_top = 300.0
+margin_right = 700.0
+margin_bottom = 360.0
+rect_scale = Vector2( 1.2, 1.2 )
 window_title = "Saved"
 dialog_text = "Saved successfully!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Credits" type="WindowDialog" parent="."]
-margin_left = 50.0
-margin_top = 50.0
-margin_right = 1230.0
-margin_bottom = 670.0
-window_title = "Credits"
+[node name="ConfirmQuit" type="ConfirmationDialog" parent="."]
+margin_left = 500.0
+margin_top = 300.0
+margin_right = 724.0
+margin_bottom = 375.0
+rect_scale = Vector2( 1.2, 1.2 )
+dialog_text = "All unsaved changes will be lost.
+Continue anyway?"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextEdit" type="TextEdit" parent="Credits"]
+[node name="ConfirmNewFile" type="ConfirmationDialog" parent="."]
+margin_right = 83.0
+margin_bottom = 58.0
+rect_scale = Vector2( 1.2, 1.2 )
+dialog_text = "All unsaved changes will be lost.
+Continue anyway?"
+
+[node name="About" type="WindowDialog" parent="."]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 1230.0
+margin_bottom = 670.0
+window_title = "About IE Code"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="About"]
 margin_right = 1180.0
 margin_bottom = 620.0
 custom_colors/member_variable_color = Color( 1, 1, 1, 1 )
@@ -196,7 +220,7 @@ custom_colors/function_color = Color( 1, 1, 1, 1 )
 custom_colors/background_color = Color( 0.145098, 0.145098, 0.14902, 1 )
 custom_colors/number_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_readonly = Color( 1, 1, 1, 1 )
-text = "IE Code v1.5.1 for [OS]
+text = "IE Code v1.5.2 for [OS]
 Copyright (c) 2021 Ihsan Entertainment. Lincensed under the MIT License.
 For more information check out https://github.com/Ihsan-Entertainment/IE-Code/blob/main/LICENSE.md
 GitHub (source code and download): https://github.com/Ihsan-Entertainment/IE-Code
@@ -491,13 +515,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="ToolBar/Container/New" to="." method="new_file"]
+[connection signal="pressed" from="ToolBar/Container/New" to="." method="new_file_button"]
 [connection signal="pressed" from="ToolBar/Container/Open" to="." method="open_file_button"]
 [connection signal="pressed" from="ToolBar/Container/Save" to="." method="save_file_button"]
 [connection signal="pressed" from="ToolBar/Container/SaveAs" to="." method="save_file_as_button"]
 [connection signal="pressed" from="ToolBar/Container/Settings" to="." method="settings_button"]
-[connection signal="pressed" from="ToolBar/Container/Credits" to="." method="credits_button"]
+[connection signal="pressed" from="ToolBar/Container/About" to="." method="about_button"]
 [connection signal="pressed" from="ToolBar/Container/Quit" to="." method="quit_button"]
 [connection signal="timeout" from="AutoSave" to="." method="autosave"]
 [connection signal="file_selected" from="OpenFile" to="." method="open_file"]
 [connection signal="file_selected" from="SaveFileAs" to="." method="save_file_as"]
+[connection signal="confirmed" from="ConfirmQuit" to="." method="confirm_quit"]
+[connection signal="confirmed" from="ConfirmNewFile" to="." method="new_file"]
