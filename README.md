@@ -1,6 +1,6 @@
-# <img src="https://github.com/Ihsan-Entertainment/IE-Code/blob/main/IE%20Code/Logo/icon.png" title="Logo" alt="Logo" height="60"> IE Code
+# <img src="https://github.com/Ihsan-Entertainment/IE-Code/blob/stable/IE%20Code/Logo/icon.png" title="Logo" alt="Logo" height="60"> IE Code
 IE Code is a simple and resource-friendly code editor created with Godot. The <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/latest">current version</a> uses Godot v3.3.4.<br />
- <a href="https://github.com/Ihsan-Entertainment/IE-Code/blob/main/Screenshots/editor.png">View screenshot</a><br />
+ <a href="https://github.com/Ihsan-Entertainment/IE-Code/blob/stable/Screenshots/editor.png">View screenshot</a><br />
 <br />
 
 ## Features
