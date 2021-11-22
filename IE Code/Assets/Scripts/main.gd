@@ -24,6 +24,8 @@ func _process(delta):
 		save_file_as_button()
 	if Input.is_action_pressed("settings"):
 		settings_button()
+	if Input.is_action_just_pressed("fullscreen") and $Settings/TabContainer/Window/Fullscreen.pressed == false:
+		$Settings/TabContainer/Window/Fullscreen.pressed = true
 	if Input.is_action_pressed("cancel") and $Settings/TabContainer/Window/Fullscreen.pressed == true:
 		$Settings/TabContainer/Window/Fullscreen.pressed = false
 
