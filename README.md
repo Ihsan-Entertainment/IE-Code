@@ -5,7 +5,7 @@ IE Code is a simple and resource-friendly code editor created with Godot. The <a
 
 ## Features
 * Borderless Window
-* Keep Screen On (Energy Saving)
+* Keep Screen On/Off (Energy Saving)
 * Fullscreen
 * Highlight Current Line
 * Syntax Highlighting (no specific programming languages supported)
