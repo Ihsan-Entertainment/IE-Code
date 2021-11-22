@@ -16,7 +16,7 @@ IE Code is a simple and resource-friendly code editor created with Godot. The <a
 * Breakpoint Gutter
 * Fold Gutter
 * Smooth Scrolling
-* Minimap (Code Outline)![icon](https://user-images.githubusercontent.com/88678143/142912397-28a31304-208b-4fcd-a651-4f4275ec76ce.png)
+* Minimap (Code Outline)
 
 * Real Time Saving
 <br />
