@@ -1,6 +1,6 @@
-# <img src="https://github.com/Ihsan-Entertainment/IE-Code/blob/stable/IE%20Code/Logo/icon.png" title="Logo" alt="Logo" height="60"> IE Code
-IE Code is a simple and resource-friendly code editor created with Godot. The <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/latest">current version</a> uses Godot v3.3.4.<br />
- <a href="https://github.com/Ihsan-Entertainment/IE-Code/blob/stable/Screenshots/editor.png">View screenshot</a><br />
+# <img src="https://github.com/Ihsan-Entertainment/IE-Code/blob/main/IE%20Code/Logo/icon.png" title="Logo" alt="Logo" height="60"> IE Code
+IE Code is a simple and resource-friendly code editor created with Godot. The <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/latest">current version</a> uses Godot v3.4.<br />
+ <a href="https://github.com/Ihsan-Entertainment/IE-Code/tree/main/IE%20Code/Screenshots/editor.png">View screenshot</a><br />
 <br />
 
 ## Features
@@ -16,7 +16,8 @@ IE Code is a simple and resource-friendly code editor created with Godot. The <a
 * Breakpoint Gutter
 * Fold Gutter
 * Smooth Scrolling
-* Minimap (Code Outline)
+* Minimap (Code Outline)![icon](https://user-images.githubusercontent.com/88678143/142912397-28a31304-208b-4fcd-a651-4f4275ec76ce.png)
+
 * Real Time Saving
 <br />
 
@@ -40,4 +41,5 @@ IE Code is a simple and resource-friendly code editor created with Godot. The <a
 * <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.4.4">v1.4.4</a> (released on 2021-10-26)<br />
 * <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.5">v1.5.0</a> (released on 2021-10-29)<br />
 * <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.5.1">v1.5.1</a> (released on 2021-11-02)<br />
-* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.5.2">v1.5.2</a> (released on 2021-11-10)
+* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.5.2">v1.5.2</a> (released on 2021-11-10)<br />
+* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.6.">v1.6.0</a> (released on 2021-11-22)
