@@ -42,4 +42,4 @@ IE Code is a simple and resource-friendly code editor created with Godot. The <a
 * <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.5">v1.5.0</a> (released on 2021-10-29)<br />
 * <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.5.1">v1.5.1</a> (released on 2021-11-02)<br />
 * <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.5.2">v1.5.2</a> (released on 2021-11-10)<br />
-* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.6.">v1.6.0</a> (released on 2021-11-22)
+* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.6">v1.6.0</a> (released on 2021-11-22)
