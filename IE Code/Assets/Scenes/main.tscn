@@ -351,13 +351,33 @@ custom_fonts/font = SubResource( 13 )
 margin_top = 35.0
 margin_right = 1172.5
 margin_bottom = 584.0
-focus_mode = 2
 custom_fonts/normal_font = SubResource( 14 )
-text = "IE Code v1.6.0
+text = "IE Code v1.6.1
 IE Code is a simple, resource-friendly and open source code editor.
-Copyright (c) 2021 Ihsan Entertainment. Licensed under the MIT License.
-Soure code and download: https://github.com/Ihsan-Entertainment/IE-Code"
-selection_enabled = true
+(c) 2021 Ihsan Entertainment. Licensed under the MIT License.
+
+-> Website
+-> Report Bug"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Website" type="TextureButton" parent="About/TabContainer/Info"]
+margin_left = 16.0
+margin_top = 134.0
+margin_right = 81.0
+margin_bottom = 152.0
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReportBug" type="TextureButton" parent="About/TabContainer/Info"]
+margin_left = 17.0
+margin_top = 158.0
+margin_right = 105.0
+margin_bottom = 179.0
+mouse_default_cursor_shape = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -660,7 +680,7 @@ hint_tooltip = "If enabled, any custom colour properties that have been
 set for the TextEdit will be visible."
 custom_fonts/font = SubResource( 27 )
 pressed = true
-text = "Syntax Highlighting (Experimental)"
+text = "Syntax Highlighting"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -805,3 +825,5 @@ __meta__ = {
 [connection signal="file_selected" from="SaveFileAs" to="." method="save_file_as"]
 [connection signal="confirmed" from="ConfirmQuit" to="." method="confirm_quit"]
 [connection signal="confirmed" from="ConfirmNewFile" to="." method="new_file"]
+[connection signal="pressed" from="About/TabContainer/Info/Website" to="." method="website"]
+[connection signal="pressed" from="About/TabContainer/Info/ReportBug" to="." method="report_bug"]

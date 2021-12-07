@@ -4,14 +4,6 @@ extends Control
 var current_path = "no path set"
 
 
-func _ready():
-	OS.window_maximized = true
-	print("Application started.")
-	print("Time and date:")
-	print(OS.get_datetime())
-
-
-# warning-ignore:unused_argument
 func _process(delta):
 	if Input.is_action_pressed("new_file"):
 		new_file_button()
@@ -28,7 +20,6 @@ func _process(delta):
 		$Settings/TabContainer/Window/Fullscreen.pressed = true
 	if Input.is_action_pressed("cancel") and $Settings/TabContainer/Window/Fullscreen.pressed == true:
 		$Settings/TabContainer/Window/Fullscreen.pressed = false
-
 
 	window_settings()
 	textedit_settings()
@@ -139,3 +130,11 @@ func quit_button():
 
 func confirm_quit():
 	get_tree().quit()
+
+
+func website():
+	OS.shell_open("https://github.com/Ihsan-Entertainment/IE-Code")
+
+
+func report_bug():
+	OS.shell_open("https://github.com/Ihsan-Entertainment/IE-Code/issues/new")
