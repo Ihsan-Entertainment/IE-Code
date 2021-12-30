@@ -4,9 +4,14 @@ extends Control
 var current_path = "no path set"
 
 
+func _ready():
+	OS.set_window_maximized(true)
+
+
 func _process(delta):
+	if Input.is_action_pressed("quicknote"):
+		quicknote()
 	if Input.is_action_pressed("new_file"):
-		new_file_button()
 		new_file_button()
 	if Input.is_action_pressed("open_file"):
 		open_file_button()
@@ -59,19 +64,22 @@ func autosave_settings():
 
 
 func autosave():
-		var file = File.new()
-		file.open(current_path, 2)
-		file.store_string($TextEdit.text)
+	var file = File.new()
+	file.open(current_path, 2)
+	file.store_string($TextEdit.text)
 
 
 func settings_button():
 	$Settings.popup_centered()
 
 
+func quicknote():
+	$QuickNote.popup_centered()
+
+
 func new_file():
 	$TextEdit.text = ""
 	current_path = "no path set"
-	print("New file created.")
 
 
 func new_file_button():
@@ -83,9 +91,6 @@ func open_file(path):
 	file.open(path, 1)
 	current_path = path
 	$TextEdit.text = file.get_as_text()
-
-	print("File opened:")
-	print(path)
 
 
 func open_file_button():
@@ -101,9 +106,6 @@ func save_file_button():
 		file.store_string($TextEdit.text)
 		$SavedDialog.popup_centered()
 
-	print("File saved:")
-	print(current_path)
-
 
 func save_file_as(path):
 	var file = File.new()
@@ -111,9 +113,6 @@ func save_file_as(path):
 	file.store_string($TextEdit.text)
 	current_path = path
 	$SavedDialog.popup_centered()
-
-	print("File saved as:")
-	print(path)
 
 
 func save_file_as_button():
