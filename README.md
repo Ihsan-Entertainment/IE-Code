@@ -23,7 +23,7 @@ IE Code is a simple and resource-friendly code editor created with Godot. The <a
 
 ## Requirements
 * OpenGL 2.1 / OpenGL ES 2.0 compatible hardware
-* ~26 MB free storage (depending on OS)
+* ~27 MB free storage (depending on OS)
 <br />
 
 ## Releases
