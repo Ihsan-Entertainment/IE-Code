@@ -26,11 +26,6 @@ IE Code is a simple and resource-friendly code editor created with Godot. The <a
 * ~27 MB free storage (depending on OS)
 <br />
 
-## Download
-<iframe frameborder="0" src="https://itch.io/embed/1361023?linkback=true&amp;border_width=0&amp;bg_color=000000&amp;fg_color=ffffff&amp;link_color=ff3f3f&amp;border_color=000000" width="550" height="165"><a href="https://ihsan-entertainment.itch.io/ie-code">IE Code by Ihsan Entertainment</a></iframe><br />
-(After selecting the operating system on itch.io, you will be redirected to GitHub for downloading.)
-<br />
-
 ## Releases
 * <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.0">v1.0.0</a> (released on 2021-09-04)<br />
 * <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.1">v1.1.0</a> (released on 2021-09-17)<br />
