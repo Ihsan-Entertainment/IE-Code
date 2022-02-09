@@ -38,7 +38,7 @@ func window_settings():
 		OS.set_window_title("IE Code" + " - " + current_path)
 
 	OS.window_borderless = $Settings/TabContainer/Window/Borderless.pressed
-	OS.keep_screen_on = $Settings/TabContainer/Window/EnergySaving.pressed
+	OS.keep_screen_on = $Settings/TabContainer/Window/KeepScreenOn.pressed
 	OS.window_resizable = $Settings/TabContainer/Window/Resizable.pressed
 	OS.window_fullscreen = $Settings/TabContainer/Window/Fullscreen.pressed
 

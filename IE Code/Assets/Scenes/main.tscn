@@ -397,9 +397,9 @@ margin_top = 35.0
 margin_right = 1172.5
 margin_bottom = 584.0
 custom_fonts/normal_font = SubResource( 14 )
-text = "IE Code v1.6.2 (2021-12-30)
+text = "IE Code v1.6.3 (2022-02-09)
 IE Code is a simple, resource-friendly and open source code editor. Made with Godot.
-© 2021 Ihsan Entertainment. Licensed under the MIT License.
+© 2021-2022 Ihsan Entertainment. Licensed under the MIT License.
 
 -> Website
 -> Report Bug"
@@ -423,7 +423,8 @@ margin_left = 17.0
 margin_top = 158.0
 margin_right = 105.0
 margin_bottom = 179.0
-hint_tooltip = "https://github.com/Ihsan-Entertainment/IE-Code/issues/new"
+hint_tooltip = "https://github.com/Ihsan-Entertainment/IE-Code/issues/new
+GitHub account required"
 mouse_default_cursor_shape = 2
 __meta__ = {
 "_edit_use_anchors_": false
@@ -642,7 +643,7 @@ anchor_bottom = 1.0
 margin_top = 40.0
 margin_right = -586.0
 margin_bottom = 56.0
-hint_tooltip = "Forces the main window to be borderless."
+hint_tooltip = "Forces the window to be borderless."
 custom_fonts/font = SubResource( 21 )
 disabled = true
 text = "Borderless"
@@ -650,7 +651,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="EnergySaving" type="CheckButton" parent="Settings/TabContainer/Window"]
+[node name="KeepScreenOn" type="CheckButton" parent="Settings/TabContainer/Window"]
 margin_left = 586.0
 margin_top = 40.0
 margin_right = 1172.0
@@ -683,11 +684,7 @@ margin_right = 1172.0
 margin_bottom = 120.0
 hint_tooltip = "Sets the window to full screen. (F12; Esc to exit)
 
-Note that this is not exclusive fullscreen. On Windows and
-Linux, a borderless window is used to emulate fullscreen. On
-macOS, a new desktop is used to display the running application.
-
-Regardless to the platform, enabling fullscreen will change the
+Enabling fullscreen will change the
 window size to the monitor's size."
 custom_fonts/font = SubResource( 24 )
 text = "Fullscreen"
@@ -829,7 +826,7 @@ margin_left = 586.0
 margin_top = 200.0
 margin_right = 1172.0
 margin_bottom = 240.0
-hint_tooltip = "Ife enabled, a minimap is shown, providing an outline
+hint_tooltip = "If enabled, a minimap is shown, providing an outline
 of your code."
 custom_fonts/font = SubResource( 35 )
 pressed = true
