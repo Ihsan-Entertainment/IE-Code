@@ -27,21 +27,22 @@ IE Code is a simple and resource-friendly code editor created with Godot. The <a
 <br />
 
 ## Releases
-* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.0">v1.0.0</a> (released on 2021-09-04)<br />
-* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.1">v1.1.0</a> (released on 2021-09-17)<br />
-* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.2">v1.2.0</a> (released on 2021-09-18)<br />
-* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.2.1">v1.2.1</a> (released on 2021-09-24)<br />
-* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.3">v1.3.0</a> (released on 2021-09-26)<br />
-* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.3.1">v1.3.1</a> (released on 2021-09-27)<br />
-* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.3.2">v1.3.2</a> (released on 2021-10-10)<br />
-* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.4">v1.4.0</a> (released on 2021-10-11)<br />
-* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.4.1">v1.4.1</a> (released on 2021-10-20)<br />
-* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.4.2">v1.4.2</a> (released on 2021-10-21)<br />
-* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.4.3">v1.4.3</a> (released on 2021-10-22)<br />
-* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.4.4">v1.4.4</a> (released on 2021-10-26)<br />
-* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.5">v1.5.0</a> (released on 2021-10-29)<br />
-* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.5.1">v1.5.1</a> (released on 2021-11-02)<br />
-* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.5.2">v1.5.2</a> (released on 2021-11-10)<br />
-* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.6">v1.6.0</a> (released on 2021-11-22)<br />
-* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.6.1">v1.6.1</a> (released on 2021-12-07)<br />
+* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.0">v1.0.0</a> (released on 2021-09-04)
+* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.1">v1.1.0</a> (released on 2021-09-17)
+* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.2">v1.2.0</a> (released on 2021-09-18)
+* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.2.1">v1.2.1</a> (released on 2021-09-24)
+* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.3">v1.3.0</a> (released on 2021-09-26)
+* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.3.1">v1.3.1</a> (released on 2021-09-27)
+* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.3.2">v1.3.2</a> (released on 2021-10-10)
+* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.4">v1.4.0</a> (released on 2021-10-11)
+* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.4.1">v1.4.1</a> (released on 2021-10-20)
+* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.4.2">v1.4.2</a> (released on 2021-10-21)
+* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.4.3">v1.4.3</a> (released on 2021-10-22)
+* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.4.4">v1.4.4</a> (released on 2021-10-26)
+* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.5">v1.5.0</a> (released on 2021-10-29)
+* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.5.1">v1.5.1</a> (released on 2021-11-02)
+* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.5.2">v1.5.2</a> (released on 2021-11-10)
+* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.6">v1.6.0</a> (released on 2021-11-22)
+* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.6.1">v1.6.1</a> (released on 2021-12-07)
 * <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.6.2">v1.6.2</a> (released on 2021-12-30)
+* <a href="https://github.com/Ihsan-Entertainment/IE-Code/releases/tag/v1.6.3">v1.6.3</a> (released on 2022-02-09)
