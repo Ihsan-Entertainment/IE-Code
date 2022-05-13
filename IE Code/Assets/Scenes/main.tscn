@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://Assets/Icons/save.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Icons/file.png" type="Texture" id=2]
@@ -35,12 +35,18 @@ font_data = ExtResource( 10 )
 [sub_resource type="DynamicFont" id=11]
 font_data = ExtResource( 10 )
 
-[sub_resource type="DynamicFont" id=38]
+[sub_resource type="DynamicFont" id=41]
 font_data = ExtResource( 10 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 14
 font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=38]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=43]
+font_data = ExtResource( 10 )
 
 [sub_resource type="DynamicFont" id=39]
 outline_color = Color( 0, 0, 0, 1 )
@@ -232,19 +238,16 @@ custom_fonts/font = SubResource( 11 )
 text = "Quit"
 icon = ExtResource( 7 )
 
-[node name="QuickNote" type="Button" parent="ToolBar"]
+[node name="Tools" type="Button" parent="ToolBar"]
 anchor_left = 0.004
-anchor_top = 0.007
-anchor_right = 0.077
-anchor_bottom = 0.049
+anchor_right = 0.074
+anchor_bottom = 0.883
 margin_left = -0.12
-margin_top = 4.73036
-margin_right = -0.560013
-margin_bottom = 32.1125
-hint_tooltip = "A small window for quick notes, that will be
-reseted after closing the application. (Ctrl+Q)"
-custom_fonts/font = SubResource( 38 )
-text = "QuickNote"
+margin_top = 5.0
+margin_right = 0.279999
+margin_bottom = -0.0131569
+custom_fonts/font = SubResource( 41 )
+text = "Tools"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -253,7 +256,7 @@ __meta__ = {
 anchor_top = 0.053
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -0.160004
+margin_top = -0.160007
 custom_colors/breakpoint_color = Color( 1, 0.470588, 0.419608, 1 )
 custom_colors/line_number_color = Color( 0.588235, 0.784314, 0.568627, 1 )
 custom_colors/background_color = Color( 0.117647, 0.117647, 0.117647, 1 )
@@ -275,12 +278,50 @@ __meta__ = {
 [node name="AutoSave" type="Timer" parent="."]
 wait_time = 0.001
 
+[node name="Tools" type="PopupMenu" parent="."]
+margin_left = 2.0
+margin_top = 35.0
+margin_right = 122.0
+margin_bottom = 113.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tools"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 112.0
+margin_bottom = 70.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuickNote" type="Button" parent="Tools/VBoxContainer"]
+margin_right = 104.0
+margin_bottom = 29.0
+hint_tooltip = "A simple notepad for quick notes that will be
+reseted after closing the application. (Ctrl+Q)"
+custom_fonts/font = SubResource( 38 )
+text = "QuickNote"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Calculator" type="Button" parent="Tools/VBoxContainer"]
+margin_top = 33.0
+margin_right = 104.0
+margin_bottom = 62.0
+hint_tooltip = "Starts the default Windows calculator. (Ctrl+M)"
+custom_fonts/font = SubResource( 43 )
+text = "Calculator"
+
 [node name="QuickNote" type="WindowDialog" parent="."]
 anchor_right = 0.273
 anchor_bottom = 0.486
 margin_right = 0.559998
 margin_bottom = 0.0799866
 custom_fonts/title_font = SubResource( 39 )
+popup_exclusive = true
 window_title = "QuickNote"
 resizable = true
 __meta__ = {
@@ -397,7 +438,7 @@ margin_top = 35.0
 margin_right = 1172.5
 margin_bottom = 584.0
 custom_fonts/normal_font = SubResource( 14 )
-text = "IE Code v1.6.3 (2022-02-09)
+text = "IE Code v1.6.4 (2022-05-13) - Windows only
 IE Code is a simple, resource-friendly and open source code editor. Made with Godot.
 © 2021-2022 Ihsan Entertainment. Licensed under the MIT License.
 
@@ -430,7 +471,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Third-Party Licenses" type="Tabs" parent="About/TabContainer"]
+[node name="Third-Party" type="Tabs" parent="About/TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -440,26 +481,30 @@ margin_right = -4.0
 margin_bottom = -4.0
 custom_fonts/font = SubResource( 15 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="About/TabContainer/Third-Party Licenses"]
+[node name="RichTextLabel" type="RichTextLabel" parent="About/TabContainer/Third-Party"]
 margin_top = 35.0
 margin_right = 1172.0
 margin_bottom = 584.0
 custom_fonts/normal_font = SubResource( 16 )
 text = "Icons by Remix Icon
-Copyright 2020 Remix Design.
+© 2020 Remix Design.
 Licensed under the Apache License 2.0.
 
 Font: Noto Sans
-Copyright 2012 Google Inc. All Rights Reserved.
+© 2012 Google Inc. All Rights Reserved.
 Licensed under the SIL Open Font License 1.1.
 
 Code Font: Droid Sans Mono
-Copyright 2007 Ascender Corp.
+© 2007 Ascender Corp.
 Licensed under the Apache License 2.0.
 
+Simple Calculator by wewnumam
+© 2022 Ahmad Adillaumam
+Licensed under the MIT License.
+
 This software uses Godot Engine, available under the MIT License.
-Copyright (c) 2007-2021 Juan Linietsky, Ariel Manzur.
-Copyright (c) 2014-2021 Godot Engine contributors."
+© 2007-2021 Juan Linietsky, Ariel Manzur.
+© 2014-2021 Godot Engine contributors."
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -864,8 +909,10 @@ __meta__ = {
 [connection signal="pressed" from="ToolBar/Container/Settings" to="." method="settings_button"]
 [connection signal="pressed" from="ToolBar/Container/About" to="." method="about_button"]
 [connection signal="pressed" from="ToolBar/Container/Quit" to="." method="quit_button"]
-[connection signal="pressed" from="ToolBar/QuickNote" to="." method="quicknote"]
+[connection signal="pressed" from="ToolBar/Tools" to="." method="tools_button"]
 [connection signal="timeout" from="AutoSave" to="." method="autosave"]
+[connection signal="pressed" from="Tools/VBoxContainer/QuickNote" to="." method="quicknote"]
+[connection signal="pressed" from="Tools/VBoxContainer/Calculator" to="." method="calculator_button"]
 [connection signal="file_selected" from="OpenFile" to="." method="open_file"]
 [connection signal="file_selected" from="SaveFileAs" to="." method="save_file_as"]
 [connection signal="confirmed" from="ConfirmQuit" to="." method="confirm_quit"]

@@ -137,3 +137,11 @@ func website():
 
 func report_bug():
 	OS.shell_open("https://github.com/Ihsan-Entertainment/IE-Code/issues/new")
+
+
+func tools_button():
+	$Tools.popup()
+
+
+func calculator_button():
+	OS.shell_open("C:/WINDOWS/system32/calc.exe")

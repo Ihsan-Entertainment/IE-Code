@@ -13,7 +13,7 @@ config_version=4
 config/name="IE Code"
 config/description="IE Code is a simple, resource-friendly and open source code editor."
 run/main_scene="res://Assets/Scenes/main.tscn"
-boot_splash/image="res://Logo/logo.png"
+boot_splash/image="res://Logo/boot.png"
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://Logo/icon.png"
 config/macos_native_icon="res://Logo/icon.icns"
@@ -120,6 +120,11 @@ cancel={
 quicknote={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":true,"meta":false,"command":true,"pressed":false,"scancode":81,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+calculator={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":true,"meta":false,"command":true,"pressed":false,"scancode":77,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
 
